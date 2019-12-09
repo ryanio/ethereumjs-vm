@@ -15,11 +15,7 @@ jobs:
         uses: actions/cache@v1
         with:
           path: node_modules
-          key: test-${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            test-${{ runner.os }}-build-${{ env.cache-name }}-
-            test-${{ runner.os }}-build-
-            test-${{ runner.os }}-
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
 
       - run: npm install
         if: steps.cacheNodeModules.outputs.cache-hit != 'true'
@@ -50,11 +46,7 @@ jobs:
         uses: actions/cache@v1
         with:
           path: node_modules
-          key: test-${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            test-${{ runner.os }}-build-${{ env.cache-name }}-
-            test-${{ runner.os }}-build-
-            test-${{ runner.os }}-
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
 
       - run: npm install
         if: steps.cacheNodeModules.outputs.cache-hit != 'true'
@@ -99,11 +91,7 @@ jobs:
         uses: actions/cache@v1
         with:
           path: node_modules
-          key: test-${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            test-${{ runner.os }}-build-${{ env.cache-name }}-
-            test-${{ runner.os }}-build-
-            test-${{ runner.os }}-
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
 
       - run: npm install
         if: steps.cacheNodeModules.outputs.cache-hit != 'true'
