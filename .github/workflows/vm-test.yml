@@ -9,7 +9,20 @@ jobs:
           node-version: 8.x
 
       - uses: actions/checkout@v1
+
+      - name: Cache node modules
+        id: cacheNodeModules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm # npm cache files are stored in `~/.npm` on Linux/macOS
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
       - run: npm install
+        if: steps.cacheNodeModules.outputs.cache-hit != 'true'
 
       - run: npm run testAPI
         env:
@@ -31,7 +44,21 @@ jobs:
           node-version: 8.x
 
       - uses: actions/checkout@v1
+
+      - name: Cache node modules
+        id: cacheNodeModules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm # npm cache files are stored in `~/.npm` on Linux/macOS
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
       - run: npm install
+        if: steps.cacheNodeModules.outputs.cache-hit != 'true'
+
       - run: mkdir -p tests/tape
 
       - name: Run ${{ matrix.hardfork }} state tests
@@ -66,7 +93,21 @@ jobs:
           node-version: 8.x
 
       - uses: actions/checkout@v1
+
+      - name: Cache node modules
+        id: cacheNodeModules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm # npm cache files are stored in `~/.npm` on Linux/macOS
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
       - run: npm install
+        if: steps.cacheNodeModules.outputs.cache-hit != 'true'
+
       - run: mkdir -p tests/tape
 
       - name: Run ${{ matrix.hardfork }} blockchain state tests
