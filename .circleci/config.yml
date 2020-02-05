@@ -1,0 +1,62 @@
+version: 2.1
+
+orbs:
+  codecov: codecov/codecov@1.0.5
+
+aliases:
+  - &working_directory
+    working_directory: ~/project/ethereumjs-vm/packages/$CIRCLE_JOB
+    docker:
+      - image: circleci/node:10
+
+  - &coverage_steps
+    steps:
+      - run: echo "Running job $CIRCLE_JOB"
+      - attach_workspace:
+          at: ~/project
+      - restore_cache:
+          name: Restore node_modules cache
+          keys:
+            - node10-{{ .Environment.CIRCLE_JOB }}-{{ checksum "package.json" }}
+      - run: 
+          name: Installing dependencies
+          command: npm install
+      - run: 
+          name: Running coverage tests
+          command: npm run coverage
+      - codecov/upload:
+          file: ./coverage/lcov.info
+          flags: $CIRCLE_JOB
+
+jobs:
+  account:
+    <<: *config
+    <<: *coverage_steps
+  block:
+    <<: *config
+    <<: *coverage_steps
+  blockchain:
+    <<: *config
+    <<: *coverage_steps
+  common:
+    <<: *config
+    <<: *coverage_steps
+  tx:
+    <<: *config
+    <<: *coverage_steps
+  vm:
+    <<: *config
+    <<: *coverage_steps
+
+
+
+workflows:
+  version: 2
+  coverage:
+    jobs:
+      - account
+      - block
+      - blockchain
+      - common
+      - tx
+      - vm
