@@ -1,5 +1,6 @@
 import * as tape from 'tape'
 import Account from '../src/index'
+const SecureTrie = require('merkle-patricia-tree/secure')
 
 tape('empty constructor', function(tester) {
   const it = tester.test
@@ -119,6 +120,31 @@ tape('isContract', function(tester) {
     }
     const account = new Account(raw)
     t.equal(account.isContract(), true)
+    t.end()
+  })
+})
+
+tape('Code insertion and retrieval', function(tester) {
+  const it = tester.test
+
+  it('should setCode and getCode', function(t) {
+    const code = Buffer.from('73095e7baea6a6c7c4c2dfeb977efac326af552d873173095e7baea6a6c7c4c2dfeb977efac326af552d873157', 'hex')
+    
+    const raw = {
+      nonce: Buffer.from('0', 'hex'),
+      balance: Buffer.from('03e7', 'hex'),
+      stateRoot: Buffer.from('56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421', 'hex'),
+      codeHash: Buffer.from('b30fb32201fe0486606ad451e1a61e2ae1748343cd3d411ed992ffcc0774edd4', 'hex')
+    }
+    const account = new Account(raw)
+    const trie = new SecureTrie()
+
+    account.setCode(trie, code, function (err, codeHash) {
+      t.equal(codeHash.toString('hex'), raw.codeHash.toString('hex'))
+      account.getCode(trie, function (err, c) {
+        t.equal(c, code)
+      })
+    })
     t.end()
   })
 })
