@@ -20,12 +20,10 @@ aliases:
       - run: 
           name: Codecov upload
           command: |
-            curl -s https://codecov.io/bash | bash -s -- \
-                -f ~/project/packages/${CIRCLE_JOB}/coverage/lcov.info \
+            curl -s https://codecov.io/bash | bash -s -- -f ~/project/packages/${CIRCLE_JOB}/coverage/lcov.info -F "${CIRCLE_JOB}" \
                 -t ${CODECOV_TOKEN} \
                 -n ${CIRCLE_BUILD_NUM} \
                 -y ".codecov.yml" \
-                -F ${CIRCLE_JOB} \
                 -Z || echo 'Codecov upload failed'
 
 jobs:
