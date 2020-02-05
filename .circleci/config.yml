@@ -1,3 +1,7 @@
+
+# This whole file is a workaround, as Codecov does not fully support GitHub Actions for pull requests from external repositories.
+# 
+
 version: 2.1
 
 orbs:
@@ -11,7 +15,7 @@ aliases:
   - &coverage_steps
     steps:
       - checkout
-      - run: echo "Running job $CIRCLE_JOB"
+      - run: echo "Running job ${CIRCLE_JOB}"
       # - restore_cache:
       #     name: Restore node_modules cache
       #     keys:
@@ -19,13 +23,25 @@ aliases:
       #       - node10-{{ .Environment.CIRCLE_JOB }}
       - run: 
           name: Installing dependencies
-          command: cd ~/project/packages/$CIRCLE_JOB && npm install
+          command: cd ~/project/packages/${CIRCLE_JOB} && npm install
       - run: 
           name: Running coverage tests
-          command: cd ~/project/packages/$CIRCLE_JOB && npm run coverage
+          command: cd ~/project/packages/${CIRCLE_JOB} && npm run coverage
+      - run: 
+          name: debug coverage test
+          command: cat ~/project/packages/${CIRCLE_JOB}/coverage/lcov.info
       - codecov/upload:
-          file: ~/project/packages/$CIRCLE_JOB/coverage/lcov.info
-          flags: $CIRCLE_JOB
+          file: ~/project/packages/${CIRCLE_JOB}/coverage/lcov.info
+          flags: ${CIRCLE_JOB}
+      - run: 
+          name: Codecov manual upload
+          command: curl -s https://codecov.io/bash | bash -s -- \
+                        -f ~/project/packages/${CIRCLE_JOB}/coverage/lcov.info \
+                        -t ${CODECOV_TOKEN} \
+                        -n ${CIRCLE_BUILD_NUM} \
+                        -y ".codecov.yml" \
+                        -F ${CIRCLE_JOB} \
+                        -Z || echo 'Codecov upload failed'
 
 jobs:
   account:
