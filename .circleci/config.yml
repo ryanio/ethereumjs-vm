@@ -4,9 +4,6 @@
 
 version: 2.1
 
-orbs:
-  codecov: codecov/codecov@1.0.5
-
 aliases:
   - &config
     docker:
@@ -15,12 +12,6 @@ aliases:
   - &coverage_steps
     steps:
       - checkout
-      - run: echo "Running job ${CIRCLE_JOB}"
-      # - restore_cache:
-      #     name: Restore node_modules cache
-      #     keys:
-      #       - node10-{{ .Environment.CIRCLE_JOB }}-{{ checksum "package.json" }}
-      #       - node10-{{ .Environment.CIRCLE_JOB }}
       - run: 
           name: Installing dependencies
           command: cd ~/project/packages/${CIRCLE_JOB} && npm install
@@ -30,17 +21,12 @@ aliases:
       - run: 
           name: debug coverage test
           command: cat ~/project/packages/${CIRCLE_JOB}/coverage/lcov.info
-      - codecov/upload:
-          file: ~/project/packages/${CIRCLE_JOB}/coverage/lcov.info
-          flags: ${CIRCLE_JOB}
       - run: 
           name: Codecov manual upload
-          command: curl -s https://codecov.io/bash | bash -s -- \
-                        -f ~/project/packages/${CIRCLE_JOB}/coverage/lcov.info \
+          command: curl -s https://codecov.io/bash | bash -s -- -f ~/project/packages/${CIRCLE_JOB}/coverage/lcov.info -F ${CIRCLE_JOB} \
                         -t ${CODECOV_TOKEN} \
                         -n ${CIRCLE_BUILD_NUM} \
                         -y ".codecov.yml" \
-                        -F ${CIRCLE_JOB} \
                         -Z || echo 'Codecov upload failed'
 
 jobs:
