@@ -1,13 +1,13 @@
-[ethereumjs-common](../README.md) › ["src/genesisStates/index"](_src_genesisstates_index_.md)
+[ethereumjs-common](../README.md) › ["genesisStates/index"](_genesisstates_index_.md)
 
-# Module: "src/genesisStates/index"
+# Module: "genesisStates/index"
 
 ## Index
 
 ### Functions
 
-- [genesisStateById](_src_genesisstates_index_.md#genesisstatebyid)
-- [genesisStateByName](_src_genesisstates_index_.md#genesisstatebyname)
+- [genesisStateById](_genesisstates_index_.md#genesisstatebyid)
+- [genesisStateByName](_genesisstates_index_.md#genesisstatebyname)
 
 ## Functions
 
@@ -15,7 +15,7 @@
 
 ▸ **genesisStateById**(`id`: number): _any_
 
-_Defined in [src/genesisStates/index.ts:23](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/genesisStates/index.ts#L23)_
+_Defined in [genesisStates/index.ts:23](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/genesisStates/index.ts#L23)_
 
 Returns the genesis state by network ID
 
@@ -35,7 +35,7 @@ Dictionary with genesis accounts
 
 ▸ **genesisStateByName**(`name`: string): _any_
 
-_Defined in [src/genesisStates/index.ts:32](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/genesisStates/index.ts#L32)_
+_Defined in [genesisStates/index.ts:32](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/genesisStates/index.ts#L32)_
 
 Returns the genesis state by network name
 
