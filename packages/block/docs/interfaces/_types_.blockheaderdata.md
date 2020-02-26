@@ -32,7 +32,7 @@ A block header's data.
 
 ### `Optional` bloom
 
-• **bloom**? : _[BufferLike](../modules/_types_.md#bufferlike)_
+• **bloom**? : _[BufferLike](../modules/\_types_.md#bufferlike)\_
 
 _Defined in [types.ts:54](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L54)_
 
@@ -40,7 +40,7 @@ _Defined in [types.ts:54](https://github.com/ethereumjs/ethereumjs-vm/blob/maste
 
 ### `Optional` coinbase
 
-• **coinbase**? : _[BufferLike](../modules/_types_.md#bufferlike)_
+• **coinbase**? : _[BufferLike](../modules/\_types_.md#bufferlike)\_
 
 _Defined in [types.ts:50](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L50)_
 
@@ -48,7 +48,7 @@ _Defined in [types.ts:50](https://github.com/ethereumjs/ethereumjs-vm/blob/maste
 
 ### `Optional` difficulty
 
-• **difficulty**? : _[BufferLike](../modules/_types_.md#bufferlike)_
+• **difficulty**? : _[BufferLike](../modules/\_types_.md#bufferlike)\_
 
 _Defined in [types.ts:55](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L55)_
 
@@ -56,7 +56,7 @@ _Defined in [types.ts:55](https://github.com/ethereumjs/ethereumjs-vm/blob/maste
 
 ### `Optional` extraData
 
-• **extraData**? : _[BufferLike](../modules/_types_.md#bufferlike)_
+• **extraData**? : _[BufferLike](../modules/\_types_.md#bufferlike)\_
 
 _Defined in [types.ts:60](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L60)_
 
@@ -64,7 +64,7 @@ _Defined in [types.ts:60](https://github.com/ethereumjs/ethereumjs-vm/blob/maste
 
 ### `Optional` gasLimit
 
-• **gasLimit**? : _[BufferLike](../modules/_types_.md#bufferlike)_
+• **gasLimit**? : _[BufferLike](../modules/\_types_.md#bufferlike)\_
 
 _Defined in [types.ts:57](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L57)_
 
@@ -72,7 +72,7 @@ _Defined in [types.ts:57](https://github.com/ethereumjs/ethereumjs-vm/blob/maste
 
 ### `Optional` gasUsed
 
-• **gasUsed**? : _[BufferLike](../modules/_types_.md#bufferlike)_
+• **gasUsed**? : _[BufferLike](../modules/\_types_.md#bufferlike)\_
 
 _Defined in [types.ts:58](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L58)_
 
@@ -80,7 +80,7 @@ _Defined in [types.ts:58](https://github.com/ethereumjs/ethereumjs-vm/blob/maste
 
 ### `Optional` mixHash
 
-• **mixHash**? : _[BufferLike](../modules/_types_.md#bufferlike)_
+• **mixHash**? : _[BufferLike](../modules/\_types_.md#bufferlike)\_
 
 _Defined in [types.ts:61](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L61)_
 
@@ -88,7 +88,7 @@ _Defined in [types.ts:61](https://github.com/ethereumjs/ethereumjs-vm/blob/maste
 
 ### `Optional` nonce
 
-• **nonce**? : _[BufferLike](../modules/_types_.md#bufferlike)_
+• **nonce**? : _[BufferLike](../modules/\_types_.md#bufferlike)\_
 
 _Defined in [types.ts:62](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L62)_
 
@@ -96,7 +96,7 @@ _Defined in [types.ts:62](https://github.com/ethereumjs/ethereumjs-vm/blob/maste
 
 ### `Optional` number
 
-• **number**? : _[BufferLike](../modules/_types_.md#bufferlike)_
+• **number**? : _[BufferLike](../modules/\_types_.md#bufferlike)\_
 
 _Defined in [types.ts:56](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L56)_
 
@@ -104,7 +104,7 @@ _Defined in [types.ts:56](https://github.com/ethereumjs/ethereumjs-vm/blob/maste
 
 ### `Optional` parentHash
 
-• **parentHash**? : _[BufferLike](../modules/_types_.md#bufferlike)_
+• **parentHash**? : _[BufferLike](../modules/\_types_.md#bufferlike)\_
 
 _Defined in [types.ts:48](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L48)_
 
@@ -112,7 +112,7 @@ _Defined in [types.ts:48](https://github.com/ethereumjs/ethereumjs-vm/blob/maste
 
 ### `Optional` receiptTrie
 
-• **receiptTrie**? : _[BufferLike](../modules/_types_.md#bufferlike)_
+• **receiptTrie**? : _[BufferLike](../modules/\_types_.md#bufferlike)\_
 
 _Defined in [types.ts:53](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L53)_
 
@@ -120,7 +120,7 @@ _Defined in [types.ts:53](https://github.com/ethereumjs/ethereumjs-vm/blob/maste
 
 ### `Optional` stateRoot
 
-• **stateRoot**? : _[BufferLike](../modules/_types_.md#bufferlike)_
+• **stateRoot**? : _[BufferLike](../modules/\_types_.md#bufferlike)\_
 
 _Defined in [types.ts:51](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L51)_
 
@@ -128,7 +128,7 @@ _Defined in [types.ts:51](https://github.com/ethereumjs/ethereumjs-vm/blob/maste
 
 ### `Optional` timestamp
 
-• **timestamp**? : _[BufferLike](../modules/_types_.md#bufferlike)_
+• **timestamp**? : _[BufferLike](../modules/\_types_.md#bufferlike)\_
 
 _Defined in [types.ts:59](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L59)_
 
@@ -136,7 +136,7 @@ _Defined in [types.ts:59](https://github.com/ethereumjs/ethereumjs-vm/blob/maste
 
 ### `Optional` transactionsTrie
 
-• **transactionsTrie**? : _[BufferLike](../modules/_types_.md#bufferlike)_
+• **transactionsTrie**? : _[BufferLike](../modules/\_types_.md#bufferlike)\_
 
 _Defined in [types.ts:52](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L52)_
 
@@ -144,6 +144,6 @@ _Defined in [types.ts:52](https://github.com/ethereumjs/ethereumjs-vm/blob/maste
 
 ### `Optional` uncleHash
 
-• **uncleHash**? : _[BufferLike](../modules/_types_.md#bufferlike)_
+• **uncleHash**? : _[BufferLike](../modules/\_types_.md#bufferlike)\_
 
 _Defined in [types.ts:49](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L49)_

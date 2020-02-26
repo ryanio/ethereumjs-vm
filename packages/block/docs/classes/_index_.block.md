@@ -43,7 +43,7 @@ An object that represents the block
 
 ### constructor
 
-\+ **new Block**(`data`: Buffer | [Buffer[], Buffer[], Buffer[]] | [BlockData](../interfaces/_index_.blockdata.md), `opts`: [ChainOptions](../interfaces/_index_.chainoptions.md)): _[Block](_index_.block.md)_
+\+ **new Block**(`data`: Buffer | [Buffer[], Buffer[], Buffer[]] | [BlockData](../interfaces/_index_.blockdata.md), `opts`: [ChainOptions](../interfaces/_index_.chainoptions.md)): _[Block](\_index_.block.md)\_
 
 _Defined in [block.ts:20](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/block.ts#L20)_
 
@@ -56,13 +56,13 @@ Creates a new block object
 | `data` | Buffer &#124; [Buffer[], Buffer[], Buffer[]] &#124; [BlockData](../interfaces/_index_.blockdata.md) | {}      | The block's data.                                                          |
 | `opts` | [ChainOptions](../interfaces/_index_.chainoptions.md)                                               | {}      | The network options for this block, and its header, uncle headers and txs. |
 
-**Returns:** _[Block](_index_.block.md)_
+**Returns:** _[Block](\_index_.block.md)\_
 
 ## Properties
 
 ### header
 
-• **header**: _[BlockHeader](_header_.blockheader.md)_
+• **header**: _[BlockHeader](\_header_.blockheader.md)\_
 
 _Defined in [block.ts:15](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/block.ts#L15)_
 
@@ -86,7 +86,7 @@ _Defined in [block.ts:18](https://github.com/ethereumjs/ethereumjs-vm/blob/maste
 
 ### uncleHeaders
 
-• **uncleHeaders**: _[BlockHeader](_header_.blockheader.md)[]_ = []
+• **uncleHeaders**: _[BlockHeader](\_header_.blockheader.md)[]\_ = []
 
 _Defined in [block.ts:17](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/block.ts#L17)_
 

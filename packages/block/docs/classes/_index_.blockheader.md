@@ -49,7 +49,7 @@ An object that represents the block header
 
 ### constructor
 
-\+ **new BlockHeader**(`data`: Buffer | [PrefixedHexString](../modules/_index_.md#prefixedhexstring) | [BufferLike](../modules/_index_.md#bufferlike)[] | [BlockHeaderData](../interfaces/_index_.blockheaderdata.md), `opts`: [ChainOptions](../interfaces/_index_.chainoptions.md)): _[BlockHeader](_index_.blockheader.md)_
+\+ **new BlockHeader**(`data`: Buffer | [PrefixedHexString](../modules/_index_.md#prefixedhexstring) | [BufferLike](../modules/_index_.md#bufferlike)[] | [BlockHeaderData](../interfaces/_index_.blockheaderdata.md), `opts`: [ChainOptions](../interfaces/_index_.chainoptions.md)): _[BlockHeader](\_index_.blockheader.md)\_
 
 _Defined in [header.ts:29](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/header.ts#L29)_
 
@@ -62,7 +62,7 @@ Creates a new block header.
 | `data` | Buffer &#124; [PrefixedHexString](../modules/_index_.md#prefixedhexstring) &#124; [BufferLike](../modules/_index_.md#bufferlike)[] &#124; [BlockHeaderData](../interfaces/_index_.blockheaderdata.md) | {}      | The data of the block header.                                              |
 | `opts` | [ChainOptions](../interfaces/_index_.chainoptions.md)                                                                                                                                                 | {}      | The network options for this block, and its header, uncle headers and txs. |
 
-**Returns:** _[BlockHeader](_index_.blockheader.md)_
+**Returns:** _[BlockHeader](\_index_.blockheader.md)\_
 
 ## Properties
 
