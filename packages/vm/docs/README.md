@@ -16,5 +16,4 @@
 * ["runTx"](modules/_runtx_.md)
 * ["state/cache"](modules/_state_cache_.md)
 * ["state/index"](modules/_state_index_.md)
-* ["state/promisified"](modules/_state_promisified_.md)
 * ["state/stateManager"](modules/_state_statemanager_.md)
