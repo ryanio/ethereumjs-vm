@@ -4,72 +4,72 @@
 
 ## Hierarchy
 
-* **BootstrapNode**
+- **BootstrapNode**
 
 ## Index
 
 ### Properties
 
-* [chainId](_src_types_.bootstrapnode.md#optional-chainid)
-* [comment](_src_types_.bootstrapnode.md#comment)
-* [id](_src_types_.bootstrapnode.md#id)
-* [ip](_src_types_.bootstrapnode.md#ip)
-* [location](_src_types_.bootstrapnode.md#location)
-* [network](_src_types_.bootstrapnode.md#optional-network)
-* [port](_src_types_.bootstrapnode.md#port)
+- [chainId](_src_types_.bootstrapnode.md#optional-chainid)
+- [comment](_src_types_.bootstrapnode.md#comment)
+- [id](_src_types_.bootstrapnode.md#id)
+- [ip](_src_types_.bootstrapnode.md#ip)
+- [location](_src_types_.bootstrapnode.md#location)
+- [network](_src_types_.bootstrapnode.md#optional-network)
+- [port](_src_types_.bootstrapnode.md#port)
 
 ## Properties
 
 ### `Optional` chainId
 
-• **chainId**? : *undefined | number*
+• **chainId**? : _undefined | number_
 
-*Defined in [src/types.ts:47](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L47)*
+_Defined in [src/types.ts:47](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L47)_
 
-___
+---
 
-###  comment
+### comment
 
-• **comment**: *string*
+• **comment**: _string_
 
-*Defined in [src/types.ts:50](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L50)*
+_Defined in [src/types.ts:50](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L50)_
 
-___
+---
 
-###  id
+### id
 
-• **id**: *string*
+• **id**: _string_
 
-*Defined in [src/types.ts:48](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L48)*
+_Defined in [src/types.ts:48](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L48)_
 
-___
+---
 
-###  ip
+### ip
 
-• **ip**: *string*
+• **ip**: _string_
 
-*Defined in [src/types.ts:44](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L44)*
+_Defined in [src/types.ts:44](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L44)_
 
-___
+---
 
-###  location
+### location
 
-• **location**: *string*
+• **location**: _string_
 
-*Defined in [src/types.ts:49](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L49)*
+_Defined in [src/types.ts:49](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L49)_
 
-___
+---
 
 ### `Optional` network
 
-• **network**? : *undefined | string*
+• **network**? : _undefined | string_
 
-*Defined in [src/types.ts:46](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L46)*
+_Defined in [src/types.ts:46](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L46)_
 
-___
+---
 
-###  port
+### port
 
-• **port**: *number | string*
+• **port**: _number | string_
 
-*Defined in [src/types.ts:45](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L45)*
+_Defined in [src/types.ts:45](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L45)_

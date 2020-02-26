@@ -4,72 +4,72 @@
 
 ## Hierarchy
 
-* **GenesisBlock**
+- **GenesisBlock**
 
 ## Index
 
 ### Properties
 
-* [difficulty](_src_types_.genesisblock.md#difficulty)
-* [extraData](_src_types_.genesisblock.md#extradata)
-* [gasLimit](_src_types_.genesisblock.md#gaslimit)
-* [hash](_src_types_.genesisblock.md#hash)
-* [nonce](_src_types_.genesisblock.md#nonce)
-* [stateRoot](_src_types_.genesisblock.md#stateroot)
-* [timestamp](_src_types_.genesisblock.md#timestamp)
+- [difficulty](_src_types_.genesisblock.md#difficulty)
+- [extraData](_src_types_.genesisblock.md#extradata)
+- [gasLimit](_src_types_.genesisblock.md#gaslimit)
+- [hash](_src_types_.genesisblock.md#hash)
+- [nonce](_src_types_.genesisblock.md#nonce)
+- [stateRoot](_src_types_.genesisblock.md#stateroot)
+- [timestamp](_src_types_.genesisblock.md#timestamp)
 
 ## Properties
 
-###  difficulty
+### difficulty
 
-• **difficulty**: *number*
+• **difficulty**: _number_
 
-*Defined in [src/types.ts:30](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L30)*
+_Defined in [src/types.ts:30](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L30)_
 
-___
+---
 
-###  extraData
+### extraData
 
-• **extraData**: *string*
+• **extraData**: _string_
 
-*Defined in [src/types.ts:32](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L32)*
+_Defined in [src/types.ts:32](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L32)_
 
-___
+---
 
-###  gasLimit
+### gasLimit
 
-• **gasLimit**: *number*
+• **gasLimit**: _number_
 
-*Defined in [src/types.ts:29](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L29)*
+_Defined in [src/types.ts:29](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L29)_
 
-___
+---
 
-###  hash
+### hash
 
-• **hash**: *string*
+• **hash**: _string_
 
-*Defined in [src/types.ts:27](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L27)*
+_Defined in [src/types.ts:27](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L27)_
 
-___
+---
 
-###  nonce
+### nonce
 
-• **nonce**: *string*
+• **nonce**: _string_
 
-*Defined in [src/types.ts:31](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L31)*
+_Defined in [src/types.ts:31](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L31)_
 
-___
+---
 
-###  stateRoot
+### stateRoot
 
-• **stateRoot**: *string*
+• **stateRoot**: _string_
 
-*Defined in [src/types.ts:33](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L33)*
+_Defined in [src/types.ts:33](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L33)_
 
-___
+---
 
-###  timestamp
+### timestamp
 
-• **timestamp**: *string | null*
+• **timestamp**: _string | null_
 
-*Defined in [src/types.ts:28](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L28)*
+_Defined in [src/types.ts:28](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L28)_

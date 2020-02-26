@@ -6,20 +6,20 @@
 
 ### Functions
 
-* [callbackify](_callbackify_.md#callbackify)
+- [callbackify](_callbackify_.md#callbackify)
 
 ## Functions
 
-###  callbackify
+### callbackify
 
-▸ **callbackify**(`original`: any): *any*
+▸ **callbackify**(`original`: any): _any_
 
-*Defined in [callbackify.ts:35](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/blockchain/src/callbackify.ts#L35)*
+_Defined in [callbackify.ts:35](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/blockchain/src/callbackify.ts#L35)_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`original` | any |
+| Name       | Type |
+| ---------- | ---- |
+| `original` | any  |
 
-**Returns:** *any*
+**Returns:** _any_

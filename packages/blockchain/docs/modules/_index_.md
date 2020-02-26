@@ -6,21 +6,21 @@
 
 ### Classes
 
-* [Blockchain](../classes/_index_.blockchain.md)
+- [Blockchain](../classes/_index_.blockchain.md)
 
 ### Interfaces
 
-* [BlockchainInterface](../interfaces/_index_.blockchaininterface.md)
-* [BlockchainOptions](../interfaces/_index_.blockchainoptions.md)
+- [BlockchainInterface](../interfaces/_index_.blockchaininterface.md)
+- [BlockchainOptions](../interfaces/_index_.blockchainoptions.md)
 
 ### Type aliases
 
-* [Block](_index_.md#block)
+- [Block](_index_.md#block)
 
 ## Type aliases
 
-###  Block
+### Block
 
-Ƭ **Block**: *any*
+Ƭ **Block**: _any_
 
-*Defined in [index.ts:23](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/blockchain/src/index.ts#L23)*
+_Defined in [index.ts:23](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/blockchain/src/index.ts#L23)_

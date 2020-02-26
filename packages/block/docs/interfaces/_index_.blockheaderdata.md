@@ -6,144 +6,144 @@ A block header's data.
 
 ## Hierarchy
 
-* **BlockHeaderData**
+- **BlockHeaderData**
 
 ## Index
 
 ### Properties
 
-* [bloom](_index_.blockheaderdata.md#optional-bloom)
-* [coinbase](_index_.blockheaderdata.md#optional-coinbase)
-* [difficulty](_index_.blockheaderdata.md#optional-difficulty)
-* [extraData](_index_.blockheaderdata.md#optional-extradata)
-* [gasLimit](_index_.blockheaderdata.md#optional-gaslimit)
-* [gasUsed](_index_.blockheaderdata.md#optional-gasused)
-* [mixHash](_index_.blockheaderdata.md#optional-mixhash)
-* [nonce](_index_.blockheaderdata.md#optional-nonce)
-* [number](_index_.blockheaderdata.md#optional-number)
-* [parentHash](_index_.blockheaderdata.md#optional-parenthash)
-* [receiptTrie](_index_.blockheaderdata.md#optional-receipttrie)
-* [stateRoot](_index_.blockheaderdata.md#optional-stateroot)
-* [timestamp](_index_.blockheaderdata.md#optional-timestamp)
-* [transactionsTrie](_index_.blockheaderdata.md#optional-transactionstrie)
-* [uncleHash](_index_.blockheaderdata.md#optional-unclehash)
+- [bloom](_index_.blockheaderdata.md#optional-bloom)
+- [coinbase](_index_.blockheaderdata.md#optional-coinbase)
+- [difficulty](_index_.blockheaderdata.md#optional-difficulty)
+- [extraData](_index_.blockheaderdata.md#optional-extradata)
+- [gasLimit](_index_.blockheaderdata.md#optional-gaslimit)
+- [gasUsed](_index_.blockheaderdata.md#optional-gasused)
+- [mixHash](_index_.blockheaderdata.md#optional-mixhash)
+- [nonce](_index_.blockheaderdata.md#optional-nonce)
+- [number](_index_.blockheaderdata.md#optional-number)
+- [parentHash](_index_.blockheaderdata.md#optional-parenthash)
+- [receiptTrie](_index_.blockheaderdata.md#optional-receipttrie)
+- [stateRoot](_index_.blockheaderdata.md#optional-stateroot)
+- [timestamp](_index_.blockheaderdata.md#optional-timestamp)
+- [transactionsTrie](_index_.blockheaderdata.md#optional-transactionstrie)
+- [uncleHash](_index_.blockheaderdata.md#optional-unclehash)
 
 ## Properties
 
 ### `Optional` bloom
 
-• **bloom**? : *[BufferLike](../modules/_index_.md#bufferlike)*
+• **bloom**? : _[BufferLike](../modules/_index_.md#bufferlike)_
 
-*Defined in [types.ts:54](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L54)*
+_Defined in [types.ts:54](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L54)_
 
-___
+---
 
 ### `Optional` coinbase
 
-• **coinbase**? : *[BufferLike](../modules/_index_.md#bufferlike)*
+• **coinbase**? : _[BufferLike](../modules/_index_.md#bufferlike)_
 
-*Defined in [types.ts:50](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L50)*
+_Defined in [types.ts:50](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L50)_
 
-___
+---
 
 ### `Optional` difficulty
 
-• **difficulty**? : *[BufferLike](../modules/_index_.md#bufferlike)*
+• **difficulty**? : _[BufferLike](../modules/_index_.md#bufferlike)_
 
-*Defined in [types.ts:55](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L55)*
+_Defined in [types.ts:55](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L55)_
 
-___
+---
 
 ### `Optional` extraData
 
-• **extraData**? : *[BufferLike](../modules/_index_.md#bufferlike)*
+• **extraData**? : _[BufferLike](../modules/_index_.md#bufferlike)_
 
-*Defined in [types.ts:60](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L60)*
+_Defined in [types.ts:60](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L60)_
 
-___
+---
 
 ### `Optional` gasLimit
 
-• **gasLimit**? : *[BufferLike](../modules/_index_.md#bufferlike)*
+• **gasLimit**? : _[BufferLike](../modules/_index_.md#bufferlike)_
 
-*Defined in [types.ts:57](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L57)*
+_Defined in [types.ts:57](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L57)_
 
-___
+---
 
 ### `Optional` gasUsed
 
-• **gasUsed**? : *[BufferLike](../modules/_index_.md#bufferlike)*
+• **gasUsed**? : _[BufferLike](../modules/_index_.md#bufferlike)_
 
-*Defined in [types.ts:58](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L58)*
+_Defined in [types.ts:58](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L58)_
 
-___
+---
 
 ### `Optional` mixHash
 
-• **mixHash**? : *[BufferLike](../modules/_index_.md#bufferlike)*
+• **mixHash**? : _[BufferLike](../modules/_index_.md#bufferlike)_
 
-*Defined in [types.ts:61](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L61)*
+_Defined in [types.ts:61](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L61)_
 
-___
+---
 
 ### `Optional` nonce
 
-• **nonce**? : *[BufferLike](../modules/_index_.md#bufferlike)*
+• **nonce**? : _[BufferLike](../modules/_index_.md#bufferlike)_
 
-*Defined in [types.ts:62](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L62)*
+_Defined in [types.ts:62](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L62)_
 
-___
+---
 
 ### `Optional` number
 
-• **number**? : *[BufferLike](../modules/_index_.md#bufferlike)*
+• **number**? : _[BufferLike](../modules/_index_.md#bufferlike)_
 
-*Defined in [types.ts:56](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L56)*
+_Defined in [types.ts:56](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L56)_
 
-___
+---
 
 ### `Optional` parentHash
 
-• **parentHash**? : *[BufferLike](../modules/_index_.md#bufferlike)*
+• **parentHash**? : _[BufferLike](../modules/_index_.md#bufferlike)_
 
-*Defined in [types.ts:48](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L48)*
+_Defined in [types.ts:48](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L48)_
 
-___
+---
 
 ### `Optional` receiptTrie
 
-• **receiptTrie**? : *[BufferLike](../modules/_index_.md#bufferlike)*
+• **receiptTrie**? : _[BufferLike](../modules/_index_.md#bufferlike)_
 
-*Defined in [types.ts:53](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L53)*
+_Defined in [types.ts:53](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L53)_
 
-___
+---
 
 ### `Optional` stateRoot
 
-• **stateRoot**? : *[BufferLike](../modules/_index_.md#bufferlike)*
+• **stateRoot**? : _[BufferLike](../modules/_index_.md#bufferlike)_
 
-*Defined in [types.ts:51](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L51)*
+_Defined in [types.ts:51](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L51)_
 
-___
+---
 
 ### `Optional` timestamp
 
-• **timestamp**? : *[BufferLike](../modules/_index_.md#bufferlike)*
+• **timestamp**? : _[BufferLike](../modules/_index_.md#bufferlike)_
 
-*Defined in [types.ts:59](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L59)*
+_Defined in [types.ts:59](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L59)_
 
-___
+---
 
 ### `Optional` transactionsTrie
 
-• **transactionsTrie**? : *[BufferLike](../modules/_index_.md#bufferlike)*
+• **transactionsTrie**? : _[BufferLike](../modules/_index_.md#bufferlike)_
 
-*Defined in [types.ts:52](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L52)*
+_Defined in [types.ts:52](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L52)_
 
-___
+---
 
 ### `Optional` uncleHash
 
-• **uncleHash**? : *[BufferLike](../modules/_index_.md#bufferlike)*
+• **uncleHash**? : _[BufferLike](../modules/_index_.md#bufferlike)_
 
-*Defined in [types.ts:49](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L49)*
+_Defined in [types.ts:49](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L49)_

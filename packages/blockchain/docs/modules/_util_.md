@@ -6,144 +6,144 @@
 
 ### Variables
 
-* [headBlockKey](_util_.md#const-headblockkey)
-* [headHeaderKey](_util_.md#const-headheaderkey)
-* [headsKey](_util_.md#const-headskey)
+- [headBlockKey](_util_.md#const-headblockkey)
+- [headHeaderKey](_util_.md#const-headheaderkey)
+- [headsKey](_util_.md#const-headskey)
 
 ### Functions
 
-* [bodyKey](_util_.md#const-bodykey)
-* [bufBE8](_util_.md#const-bufbe8)
-* [hashToNumberKey](_util_.md#const-hashtonumberkey)
-* [headerKey](_util_.md#const-headerkey)
-* [numberToHashKey](_util_.md#const-numbertohashkey)
-* [tdKey](_util_.md#const-tdkey)
+- [bodyKey](_util_.md#const-bodykey)
+- [bufBE8](_util_.md#const-bufbe8)
+- [hashToNumberKey](_util_.md#const-hashtonumberkey)
+- [headerKey](_util_.md#const-headerkey)
+- [numberToHashKey](_util_.md#const-numbertohashkey)
+- [tdKey](_util_.md#const-tdkey)
 
 ## Variables
 
 ### `Const` headBlockKey
 
-• **headBlockKey**: *"LastBlock"* = "LastBlock"
+• **headBlockKey**: _"LastBlock"_ = "LastBlock"
 
-*Defined in [util.ts:13](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/blockchain/src/util.ts#L13)*
+_Defined in [util.ts:13](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/blockchain/src/util.ts#L13)_
 
 Current canonical head for full sync
 
-___
+---
 
 ### `Const` headHeaderKey
 
-• **headHeaderKey**: *"LastHeader"* = "LastHeader"
+• **headHeaderKey**: _"LastHeader"_ = "LastHeader"
 
-*Defined in [util.ts:9](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/blockchain/src/util.ts#L9)*
+_Defined in [util.ts:9](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/blockchain/src/util.ts#L9)_
 
 Current canonical head for light sync
 
-___
+---
 
 ### `Const` headsKey
 
-• **headsKey**: *"heads"* = "heads"
+• **headsKey**: _"heads"_ = "heads"
 
-*Defined in [util.ts:5](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/blockchain/src/util.ts#L5)*
+_Defined in [util.ts:5](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/blockchain/src/util.ts#L5)_
 
 ## Functions
 
 ### `Const` bodyKey
 
-▸ **bodyKey**(`n`: BN, `hash`: Buffer): *Buffer‹›*
+▸ **bodyKey**(`n`: BN, `hash`: Buffer): _Buffer‹›_
 
-*Defined in [util.ts:43](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/blockchain/src/util.ts#L43)*
+_Defined in [util.ts:43](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/blockchain/src/util.ts#L43)_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`n` | BN |
-`hash` | Buffer |
+| Name   | Type   |
+| ------ | ------ |
+| `n`    | BN     |
+| `hash` | Buffer |
 
-**Returns:** *Buffer‹›*
+**Returns:** _Buffer‹›_
 
-___
+---
 
 ### `Const` bufBE8
 
-▸ **bufBE8**(`n`: BN): *Buffer‹›*
+▸ **bufBE8**(`n`: BN): _Buffer‹›_
 
-*Defined in [util.ts:40](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/blockchain/src/util.ts#L40)*
+_Defined in [util.ts:40](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/blockchain/src/util.ts#L40)_
 
 Convert BN to big endian Buffer
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`n` | BN |
+| Name | Type |
+| ---- | ---- |
+| `n`  | BN   |
 
-**Returns:** *Buffer‹›*
+**Returns:** _Buffer‹›_
 
-___
+---
 
 ### `Const` hashToNumberKey
 
-▸ **hashToNumberKey**(`hash`: Buffer): *Buffer‹›*
+▸ **hashToNumberKey**(`hash`: Buffer): _Buffer‹›_
 
-*Defined in [util.ts:45](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/blockchain/src/util.ts#L45)*
+_Defined in [util.ts:45](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/blockchain/src/util.ts#L45)_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`hash` | Buffer |
+| Name   | Type   |
+| ------ | ------ |
+| `hash` | Buffer |
 
-**Returns:** *Buffer‹›*
+**Returns:** _Buffer‹›_
 
-___
+---
 
 ### `Const` headerKey
 
-▸ **headerKey**(`n`: BN, `hash`: Buffer): *Buffer‹›*
+▸ **headerKey**(`n`: BN, `hash`: Buffer): _Buffer‹›_
 
-*Defined in [util.ts:42](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/blockchain/src/util.ts#L42)*
+_Defined in [util.ts:42](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/blockchain/src/util.ts#L42)_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`n` | BN |
-`hash` | Buffer |
+| Name   | Type   |
+| ------ | ------ |
+| `n`    | BN     |
+| `hash` | Buffer |
 
-**Returns:** *Buffer‹›*
+**Returns:** _Buffer‹›_
 
-___
+---
 
 ### `Const` numberToHashKey
 
-▸ **numberToHashKey**(`n`: BN): *Buffer‹›*
+▸ **numberToHashKey**(`n`: BN): _Buffer‹›_
 
-*Defined in [util.ts:44](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/blockchain/src/util.ts#L44)*
+_Defined in [util.ts:44](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/blockchain/src/util.ts#L44)_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`n` | BN |
+| Name | Type |
+| ---- | ---- |
+| `n`  | BN   |
 
-**Returns:** *Buffer‹›*
+**Returns:** _Buffer‹›_
 
-___
+---
 
 ### `Const` tdKey
 
-▸ **tdKey**(`n`: BN, `hash`: Buffer): *Buffer‹›*
+▸ **tdKey**(`n`: BN, `hash`: Buffer): _Buffer‹›_
 
-*Defined in [util.ts:41](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/blockchain/src/util.ts#L41)*
+_Defined in [util.ts:41](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/blockchain/src/util.ts#L41)_
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`n` | BN |
-`hash` | Buffer |
+| Name   | Type   |
+| ------ | ------ |
+| `n`    | BN     |
+| `hash` | Buffer |
 
-**Returns:** *Buffer‹›*
+**Returns:** _Buffer‹›_

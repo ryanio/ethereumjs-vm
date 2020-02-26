@@ -6,4 +6,4 @@
 
 ### Classes
 
-* [Common](../classes/_src_index_.common.md)
+- [Common](../classes/_src_index_.common.md)

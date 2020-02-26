@@ -4,45 +4,45 @@
 
 ## Hierarchy
 
-* **Hardfork**
+- **Hardfork**
 
 ## Index
 
 ### Properties
 
-* [block](_src_types_.hardfork.md#block)
-* [consensus](_src_types_.hardfork.md#consensus)
-* [finality](_src_types_.hardfork.md#finality)
-* [name](_src_types_.hardfork.md#name)
+- [block](_src_types_.hardfork.md#block)
+- [consensus](_src_types_.hardfork.md#consensus)
+- [finality](_src_types_.hardfork.md#finality)
+- [name](_src_types_.hardfork.md#name)
 
 ## Properties
 
-###  block
+### block
 
-• **block**: *number | null*
+• **block**: _number | null_
 
-*Defined in [src/types.ts:38](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L38)*
+_Defined in [src/types.ts:38](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L38)_
 
-___
+---
 
-###  consensus
+### consensus
 
-• **consensus**: *string*
+• **consensus**: _string_
 
-*Defined in [src/types.ts:39](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L39)*
+_Defined in [src/types.ts:39](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L39)_
 
-___
+---
 
-###  finality
+### finality
 
-• **finality**: *any*
+• **finality**: _any_
 
-*Defined in [src/types.ts:40](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L40)*
+_Defined in [src/types.ts:40](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L40)_
 
-___
+---
 
-###  name
+### name
 
-• **name**: *string*
+• **name**: _string_
 
-*Defined in [src/types.ts:37](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L37)*
+_Defined in [src/types.ts:37](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L37)_

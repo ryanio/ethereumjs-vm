@@ -6,56 +6,56 @@
 
 ### Object literals
 
-* [chains](_src_chains_index_.md#const-chains)
+- [chains](_src_chains_index_.md#const-chains)
 
 ## Object literals
 
 ### `Const` chains
 
-### ▪ **chains**: *object*
+### ▪ **chains**: _object_
 
-*Defined in [src/chains/index.ts:3](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/chains/index.ts#L3)*
+_Defined in [src/chains/index.ts:3](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/chains/index.ts#L3)_
 
-###  goerli
+### goerli
 
-• **goerli**: *any* = require('./goerli.json')
+• **goerli**: _any_ = require('./goerli.json')
 
-*Defined in [src/chains/index.ts:15](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/chains/index.ts#L15)*
+_Defined in [src/chains/index.ts:15](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/chains/index.ts#L15)_
 
-###  kovan
+### kovan
 
-• **kovan**: *any* = require('./kovan.json')
+• **kovan**: _any_ = require('./kovan.json')
 
-*Defined in [src/chains/index.ts:14](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/chains/index.ts#L14)*
+_Defined in [src/chains/index.ts:14](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/chains/index.ts#L14)_
 
-###  mainnet
+### mainnet
 
-• **mainnet**: *any* = require('./mainnet.json')
+• **mainnet**: _any_ = require('./mainnet.json')
 
-*Defined in [src/chains/index.ts:11](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/chains/index.ts#L11)*
+_Defined in [src/chains/index.ts:11](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/chains/index.ts#L11)_
 
-###  rinkeby
+### rinkeby
 
-• **rinkeby**: *any* = require('./rinkeby.json')
+• **rinkeby**: _any_ = require('./rinkeby.json')
 
-*Defined in [src/chains/index.ts:13](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/chains/index.ts#L13)*
+_Defined in [src/chains/index.ts:13](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/chains/index.ts#L13)_
 
-###  ropsten
+### ropsten
 
-• **ropsten**: *any* = require('./ropsten.json')
+• **ropsten**: _any_ = require('./ropsten.json')
 
-*Defined in [src/chains/index.ts:12](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/chains/index.ts#L12)*
+_Defined in [src/chains/index.ts:12](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/chains/index.ts#L12)_
 
-▪ **names**: *object*
+▪ **names**: _object_
 
-*Defined in [src/chains/index.ts:4](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/chains/index.ts#L4)*
+_Defined in [src/chains/index.ts:4](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/chains/index.ts#L4)_
 
-* **1**: *string* = "mainnet"
+- **1**: _string_ = "mainnet"
 
-* **3**: *string* = "ropsten"
+- **3**: _string_ = "ropsten"
 
-* **4**: *string* = "rinkeby"
+- **4**: _string_ = "rinkeby"
 
-* **42**: *string* = "kovan"
+- **42**: _string_ = "kovan"
 
-* **6284**: *string* = "goerli"
+- **6284**: _string_ = "goerli"

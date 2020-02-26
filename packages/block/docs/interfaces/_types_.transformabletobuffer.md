@@ -6,20 +6,20 @@ Any object that can be transformed into a `Buffer`
 
 ## Hierarchy
 
-* **TransformableToBuffer**
+- **TransformableToBuffer**
 
 ## Index
 
 ### Methods
 
-* [toBuffer](_types_.transformabletobuffer.md#tobuffer)
+- [toBuffer](_types_.transformabletobuffer.md#tobuffer)
 
 ## Methods
 
-###  toBuffer
+### toBuffer
 
-▸ **toBuffer**(): *Buffer*
+▸ **toBuffer**(): _Buffer_
 
-*Defined in [types.ts:31](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L31)*
+_Defined in [types.ts:31](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/block/src/types.ts#L31)_
 
-**Returns:** *Buffer*
+**Returns:** _Buffer_

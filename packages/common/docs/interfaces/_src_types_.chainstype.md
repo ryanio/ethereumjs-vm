@@ -4,26 +4,26 @@
 
 ## Hierarchy
 
-* **chainsType**
+- **chainsType**
 
 ## Indexable
 
-* \[ **key**: *string*\]: any
+- \[ **key**: _string_\]: any
 
 ## Index
 
 ### Properties
 
-* [names](_src_types_.chainstype.md#names)
+- [names](_src_types_.chainstype.md#names)
 
 ## Properties
 
-###  names
+### names
 
-• **names**: *object*
+• **names**: _object_
 
-*Defined in [src/types.ts:9](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L9)*
+_Defined in [src/types.ts:9](https://github.com/ethereumjs/ethereumjs-vm/blob/master/packages/common/src/types.ts#L9)_
 
 #### Type declaration:
 
-* \[ **key**: *string*\]: string
+- \[ **key**: _string_\]: string
