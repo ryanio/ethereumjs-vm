@@ -221,9 +221,6 @@ export const handlers: { [k: string]: OpHandler } = {
   },
   SHL: function (runState: RunState) {
     const [a, b] = runState.stack.popN(2)
-    if (!runState._common.gteHardfork('constantinople')) {
-      trap(ERROR.INVALID_OPCODE)
-    }
     if (a.gten(256)) {
       runState.stack.push(new BN(0))
       return
@@ -234,9 +231,6 @@ export const handlers: { [k: string]: OpHandler } = {
   },
   SHR: function (runState: RunState) {
     const [a, b] = runState.stack.popN(2)
-    if (!runState._common.gteHardfork('constantinople')) {
-      trap(ERROR.INVALID_OPCODE)
-    }
     if (a.gten(256)) {
       runState.stack.push(new BN(0))
       return
@@ -247,9 +241,6 @@ export const handlers: { [k: string]: OpHandler } = {
   },
   SAR: function (runState: RunState) {
     const [a, b] = runState.stack.popN(2)
-    if (!runState._common.gteHardfork('constantinople')) {
-      trap(ERROR.INVALID_OPCODE)
-    }
 
     let r
     const isSigned = b.testn(255)
@@ -381,9 +372,6 @@ export const handlers: { [k: string]: OpHandler } = {
   },
   EXTCODEHASH: async function (runState: RunState) {
     let address = runState.stack.pop()
-    if (!runState._common.gteHardfork('constantinople')) {
-      trap(ERROR.INVALID_OPCODE)
-    }
 
     const addressBuf = addressToBuffer(address)
     const empty = await runState.eei.isAccountEmpty(addressBuf)
@@ -454,17 +442,9 @@ export const handlers: { [k: string]: OpHandler } = {
     runState.stack.push(runState.eei.getBlockGasLimit())
   },
   CHAINID: function (runState: RunState) {
-    if (!runState._common.gteHardfork('istanbul')) {
-      trap(ERROR.INVALID_OPCODE)
-    }
-
     runState.stack.push(runState.eei.getChainId())
   },
   SELFBALANCE: function (runState: RunState) {
-    if (!runState._common.gteHardfork('istanbul')) {
-      trap(ERROR.INVALID_OPCODE)
-    }
-
     runState.stack.push(runState.eei.getSelfBalance())
   },
   // 0x50 range - 'storage' and execution
@@ -638,10 +618,6 @@ export const handlers: { [k: string]: OpHandler } = {
     runState.stack.push(ret)
   },
   CREATE2: async function (runState: RunState) {
-    if (!runState._common.gteHardfork('constantinople')) {
-      trap(ERROR.INVALID_OPCODE)
-    }
-
     if (runState.eei.isStatic()) {
       trap(ERROR.STATIC_STATE_CHANGE)
     }
@@ -684,9 +660,9 @@ export const handlers: { [k: string]: OpHandler } = {
     if (runState.eei.isStatic() && !value.isZero()) {
       trap(ERROR.STATIC_STATE_CHANGE)
     }
-
     subMemUsage(runState, inOffset, inLength)
     subMemUsage(runState, outOffset, outLength)
+
     if (!value.isZero()) {
       runState.eei.useGas(new BN(runState._common.param('gasPrices', 'callValueTransfer')))
     }
@@ -697,9 +673,17 @@ export const handlers: { [k: string]: OpHandler } = {
       data = runState.memory.read(inOffset.toNumber(), inLength.toNumber())
     }
 
-    const empty = await runState.eei.isAccountEmpty(toAddressBuf)
-    if (empty) {
-      if (!value.isZero()) {
+    if (runState._common.gteHardfork('spuriousDragon')) {
+      // We are at or after Spurious Dragon
+      // Call new account gas: account is DEAD and we transfer nonzero value
+      if ((await runState.stateManager.accountIsEmpty(toAddressBuf)) && !value.isZero()) {
+        runState.eei.useGas(new BN(runState._common.param('gasPrices', 'callNewAccount')))
+      }
+    } else if (!(await runState.stateManager.accountExists(toAddressBuf))) {
+      // We are before Spurious Dragon
+      // Call new account gas: account does not exist (it is not in the state trie, not even as an "empty" account)
+      const accountDoesNotExist = !(await runState.stateManager.accountExists(toAddressBuf))
+      if (accountDoesNotExist) {
         runState.eei.useGas(new BN(runState._common.param('gasPrices', 'callNewAccount')))
       }
     }
@@ -813,12 +797,28 @@ export const handlers: { [k: string]: OpHandler } = {
     }
 
     const selfdestructToAddressBuf = addressToBuffer(selfdestructToAddress)
-    const balance = await runState.eei.getExternalBalance(runState.eei.getAddress())
-    if (balance.gtn(0)) {
-      const empty = await runState.eei.isAccountEmpty(selfdestructToAddressBuf)
-      if (empty) {
-        runState.eei.useGas(new BN(runState._common.param('gasPrices', 'callNewAccount')))
+    let deductGas = false
+    if (runState._common.gteHardfork('spuriousDragon')) {
+      // EIP-161: State Trie Clearing
+      const balance = await runState.eei.getExternalBalance(runState.eei.getAddress())
+      if (balance.gtn(0)) {
+        // This technically checks if account is empty or non-existent
+        // TODO: improve on the API here (EEI and StateManager)
+        const empty = await runState.eei.isAccountEmpty(selfdestructToAddressBuf)
+        if (empty) {
+          const account = await runState.stateManager.getAccount(selfdestructToAddressBuf)
+          deductGas = true
+        }
       }
+    } else {
+      // Pre EIP-161 (Spurious Dragon) gas semantics
+      const exists = await runState.stateManager.accountExists(selfdestructToAddressBuf)
+      if (!exists) {
+        deductGas = true
+      }
+    }
+    if (deductGas) {
+      runState.eei.useGas(new BN(runState._common.param('gasPrices', 'callNewAccount')))
     }
 
     return runState.eei.selfDestruct(selfdestructToAddressBuf)

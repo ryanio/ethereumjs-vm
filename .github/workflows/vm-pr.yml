@@ -1,10 +1,7 @@
 name: VM
 on:
-  push:
-    branches:
-      - master
-    tags:
-      - '*'
+  pull_request:
+    types: [opened, reopened, synchronize]
 
 env:
   cwd: ${{github.workspace}}/packages/vm
@@ -26,7 +23,7 @@ jobs:
         uses: actions/cache@v2
         id: cache
         with:
-          key: VM-${{ runner.os }}-${{ matrix.node-version }}-${{ hashFiles('**/package-lock.json') }}
+          key: VM-${{ runner.os }}-12-${{ hashFiles('**/package-lock.json') }}
           path: '**/node_modules'
 
       # Installs root dependencies, ignoring Bootstrap All script.
@@ -52,6 +49,10 @@ jobs:
   
   test-vm-state:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        fork: ['Petersburg', 'Istanbul', 'MuirGlacier']
+      fail-fast: false
     steps:
       - uses: actions/setup-node@v1
         with:
@@ -62,7 +63,7 @@ jobs:
         uses: actions/cache@v2
         id: cache
         with:
-          key: VM-${{ runner.os }}-${{ matrix.node-version }}-${{ hashFiles('**/package-lock.json') }}
+          key: VM-${{ runner.os }}-12-${{ hashFiles('**/package-lock.json') }}
           path: '**/node_modules'
 
       # Installs root dependencies, ignoring Bootstrap All script.
@@ -75,10 +76,15 @@ jobs:
       - run: npm run build:vm
         working-directory: ${{github.workspace}}
 
-      - run: npm run test:state:selectedForks
+      - run: npm run test:state -- --fork=${{ matrix.fork }}
 
   test-vm-blockchain:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # This is the most fair division among 1 directory vs. everything else
+        args: ['--excludeDir=stTimeConsuming', '--dir=GeneralStateTests/stTimeConsuming']
+      fail-fast: false
     steps:
       - uses: actions/setup-node@v1
         with:
@@ -89,7 +95,7 @@ jobs:
         uses: actions/cache@v2
         id: cache
         with:
-          key: VM-${{ runner.os }}-${{ matrix.node-version }}-${{ hashFiles('**/package-lock.json') }}
+          key: VM-${{ runner.os }}-12-${{ hashFiles('**/package-lock.json') }}
           path: '**/node_modules'
 
       # Installs root dependencies, ignoring Bootstrap All script.
@@ -102,28 +108,4 @@ jobs:
       - run: npm run build:vm
         working-directory: ${{github.workspace}}
 
-      - run: npm run test:blockchain
-
-  vm-benchmarks:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-      - uses: actions/checkout@v2
-
-      - run: npm run build:benchmarks
-      - run: npm run benchmarks -- 5 | tee output.txt
-
-      - name: Store benchmark result
-        uses: rhysd/github-action-benchmark@v1
-        with:
-          tool: 'benchmarkjs'
-          # Where the output from the benchmark tool is stored
-          output-file-path: output.txt
-          # GitHub API token to make a commit comment
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          # Enable alert commit comment
-          comment-on-alert: true
-          # Push and deploy GitHub pages branch automatically
-          auto-push: true
+      - run: npm run test:blockchain -- ${{ matrix.args }}
